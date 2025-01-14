@@ -8,12 +8,19 @@ class NoteApp extends React.Component {
     this.state = {
       notes: getInitialData(),
     };
+
+    this.onDeleteHandler = this.onDeleteHandler.bind(this)
+  }
+
+  onDeleteHandler(id) {
+    const notes = this.state.notes.filter(note => note.id !== id)
+    this.setState({ notes })
   }
 
   render() {
     return (
       <div className="note-app">
-        <NoteList notes={this.state.notes} />
+        <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
       </div>
     );
   }
