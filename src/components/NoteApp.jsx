@@ -1,5 +1,6 @@
 import React from 'react';
-import NoteList from './notes/noteList';
+import NoteList from './notes/NoteList';
+import HeaderApp from './header/HeaderApp';
 import { getInitialData } from '../utils';
 
 class NoteApp extends React.Component {
@@ -19,9 +20,13 @@ class NoteApp extends React.Component {
 
   render() {
     return (
-      <div className="note-app">
-        <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
-      </div>
+      <div>
+    <HeaderApp />
+    <div className="note-app__body">
+      <h2>Your Notes</h2>
+      <NoteList notes={this.state.notes} onDelete={this.onDeleteHandler} />
+    </div>
+  </div>
     );
   }
 }

@@ -3,7 +3,7 @@ import NoteItem from './noteItem';
 
 function NoteList({ notes, onDelete, onArchive }) {
   return (
-    <div className="note-list">
+    <div className="notes-list">
       {notes.map((note) => (
         <NoteItem
           key={note.id}
