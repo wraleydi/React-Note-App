@@ -20,9 +20,9 @@ function NoteItem({
         body={body}
         createdAt={showFormattedDate(createdAt)}
       />
-      <div className='note-item__action'>
-      <ButtonDelete id={id} onDelete={onDelete} />
-      <ButtonArchive id={id} onArchive={onArchive} isArchive={isArchive} />
+      <div className="note-item__action">
+        <ButtonDelete id={id} onDelete={onDelete} />
+        <ButtonArchive id={id} onArchive={onArchive} isArchive={isArchive} />
       </div>
     </div>
   );

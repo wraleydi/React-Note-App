@@ -1,14 +1,14 @@
-import React from "react";
-import NoteTitleApp from "./NoteTitleApp";
-import NoteSearchApp from "./NoteSearchApp";
+import React from 'react';
+import NoteTitleApp from './NoteTitleApp';
+import NoteSearchApp from './NoteSearchApp';
 
 function HeaderApp({ onSearch }) {
-    return (
-        <div className="note-app__header">
-            <NoteTitleApp />
-            <NoteSearchApp onSearch={onSearch}/>
-        </div>
-    )
+  return (
+    <div className="note-app__header">
+      <NoteTitleApp />
+      <NoteSearchApp onSearch={onSearch} />
+    </div>
+  );
 }
 
-export default HeaderApp
+export default HeaderApp;

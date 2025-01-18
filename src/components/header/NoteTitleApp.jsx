@@ -1,9 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function NoteTitleApp() {
-    return (
-        <h1>Notes Apps</h1>
-    )
+  return <h1>Notes Apps</h1>;
 }
 
-export default NoteTitleApp 
+export default NoteTitleApp;
