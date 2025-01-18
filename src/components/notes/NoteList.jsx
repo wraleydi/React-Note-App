@@ -1,10 +1,13 @@
 import React from 'react';
-import NoteItem from './noteItem';
+import NoteItem from './NoteItem';
+import MessageNote from './MessageNotes';
 
 function NoteList({ notes, onDelete, onArchive }) {
   return (
     <div className="notes-list">
-      {notes.map((note) => (
+      {
+      notes.length > 0 ? (
+      notes.map((note) => (
         <NoteItem
           key={note.id}
           id={note.id}
@@ -13,7 +16,11 @@ function NoteList({ notes, onDelete, onArchive }) {
           isArchive={note.archived}
           {...note}
         />
-      ))}
+      ))
+      ) : (
+        <MessageNote />
+      )
+    }
     </div>
   );
 }
