@@ -16,7 +16,7 @@ class NoteApp extends React.Component {
     this.onSearchHandler = this.onSearchHandler.bind(this);
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onArchiveHandler = this.onArchiveHandler.bind(this);
-    this.onAddNoteHandler = this.onAddNoteHandler.bind(this)
+    this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
   }
 
   onDeleteHandler(id) {
@@ -44,16 +44,16 @@ class NoteApp extends React.Component {
       return {
         notes: [
           {
-            id: +new  Date(),
+            id: +new Date(),
             title,
             body,
             createdAt,
             archived: false,
           },
-          ...prevState.notes
-        ]
-      }
-    })
+          ...prevState.notes,
+        ],
+      };
+    });
   }
 
   render() {
